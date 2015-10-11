@@ -104,7 +104,7 @@
           <p class="fragment">
             Written in <span style="color: red;">ECMAScript 3</span>.
             <br>
-            We will update it together to <span style="color: #8CC63F;">ECMAScript 2016</span>.
+            We will update it to <span style="color: #8CC63F;">ECMAScript 2016</span> together.
           </p>
         </section>
 
@@ -128,7 +128,7 @@
         <section>
           <h2>Array methods</h2>
           <pre><code data-trim class="js" data-fill="examples/array-methods.js"></code></pre>
-          <p>And a few <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#Iteration_methods">others</a>.</p>
+          <p>And <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#Iteration_methods">others</a>.</p>
         </section>
 
         <section>
@@ -136,24 +136,48 @@
         </section>
 
         <section>
-          <h2>Arrow functions (1/4)</h2>
+          <h2>Arrow functions (1/2)</h2>
           <pre><code data-trim class="js" data-fill="examples/fat-arrow.js"></code></pre>
         </section>
 
         <section>
-          <h2>Arrow functions (2/4)</h2>
-          <pre><code data-trim class="js" data-fill="examples/fat-arrow-this.js"></code></pre>
-          <pre class="fragment"><code class="nohighlight" style="color: red;">// Uncaught TypeError: Cannot read property 'name' of undefined</code></pre>
-        </section>
+          <style scoped>
+            .reveal div.replaceable, .reveal div.replaceable.visible + div.replaceable {
+              display: none;
+            }
+            .reveal div.replaceable.visible {
+              display: block;
+            }
+          </style>
 
-        <section>
-          <h2>Arrow functions (3/4)</h2>
-          <pre><code data-trim class="js" data-fill="examples/fat-arrow-this-2.js"></code></pre>
-        </section>
+          <h2>Arrow functions (2/2)</h2>
 
-        <section>
-          <h2>Arrow functions (4/4)</h2>
-          <pre><code data-trim class="js" data-fill="examples/fat-arrow-this-3.js"></code></pre>
+          <div class="fragment replaceable" data-fragment-index="4">
+            <p>But arrow functions work out of the box.</p>
+            <pre><code data-trim class="js" data-fill="examples/fat-arrow-this-4.js"></code></pre>
+          </div>
+
+          <div class="fragment replaceable" data-fragment-index="3">
+            <p>Awkward workarounds exist:</p>
+            <pre><code data-trim class="js" data-fill="examples/fat-arrow-this-3.js"></code></pre>
+          </div>
+
+          <div class="fragment replaceable" data-fragment-index="2">
+            <p>This should work:</p>
+            <pre><code data-trim class="js" data-fill="examples/fat-arrow-this-2.js"></code></pre>
+          </div>
+
+          <div class="visible replaceable">
+            <p>This should work:</p>
+            <pre><code data-trim class="js" data-fill="examples/fat-arrow-this-1.js"></code></pre>
+          </div>
+
+          <div class="fragment" data-fragment-index="1">
+            <div class="fragment fade-out" data-fragment-index="3">
+              <p>But it doesn't.</p>
+              <pre style="text-align: center;"><code class="nohighlight" style="color: red;">Uncaught TypeError: Cannot read property 'name' of undefined</code></pre>
+            </div>
+          </div>
         </section>
 
         <section>
@@ -162,7 +186,6 @@
 
         <section>
           <h2>Template strings</h2>
-          <p>Backticks instead of quotes.</p>
           <pre><code data-trim class="js" data-fill="examples/template-strings.js"></code></pre>
         </section>
 
@@ -187,6 +210,21 @@
 
         <section>
           <p>Open app.js and replace callbacks with <code>async</code> / <code>await</code>.</p>
+        </section>
+
+        <section>
+          <h2>Options</h2>
+          <pre class="fragment" data-fragment-index="1"><code data-trim class="js">
+async function getLovelyDays(minHumidity, maxTemperature) {
+  ...
+}
+          </code></pre>
+          <pre class="fragment" data-fragment-index="2"><code data-trim class="js">
+async function showLovelyDays() {
+  var lovelyDays = await getLovelyDays(75, 80);
+  ...
+}
+          </code></pre>
         </section>
 
         <section>

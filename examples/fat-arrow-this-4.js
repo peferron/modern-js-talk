@@ -3,8 +3,8 @@ var jane = {
 
   sayHello: function(friends) {
     // Here, `this` is `jane`.
-    friends.forEach(function(friend) {
-      // But here, `this` is undefined (in strict mode).
+    friends.forEach(friend => {
+      // Reuses the surrounding `this`, which is `jane`.
       console.log(this.name + ' says hello to ' + friend);
     });
   }
