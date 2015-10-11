@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+  <head>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+    <link rel="stylesheet" href="../css/reveal.css">
+    <link rel="stylesheet" href="../css/theme/white.css" id="theme">
+
+    <script src="app.js"></script>
+
+    <style>
+      body {
+        padding: 10px;
+        background: #CCC;
+      }
+      .app-button {
+        background: #8CC63F;
+        padding: 10px 20px;
+        border-radius: 5px;
+        font-size: 100%;
+        outline: none;
+        border: none;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body class="reveal">
+    <button type="button" class="app-button" onclick="showLovelyDays()">Show lovely days</button>
+    <p></p>
+    <ul id="lovely-days"></ul>
+  </body>
+</html>

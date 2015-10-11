@@ -1,0 +1,7 @@
+[
+  { "day": "Tuesday",   "temperature": 53, "humidity": 99 },
+  { "day": "Wednesday", "temperature": 54, "humidity": 87 },
+  { "day": "Thursday",  "temperature": 52, "humidity": 93 },
+  { "day": "Friday",    "temperature": 55, "humidity": 71 },
+  { "day": "Saturday",  "temperature": 52, "humidity": 96 }
+]

@@ -1,0 +1,15 @@
+{
+    "parser": "babel-eslint",
+    "env": {
+        "browser": true
+    },
+    "rules": {
+        "strict": 0,
+        "quotes": [2, "single"],
+        "no-unused-vars": [2, {"varsIgnorePattern": "showLovelyDays$"}]
+    },
+    "ecmaFeatures": {
+        "arrowFunctions": true,
+        "templateStrings": true
+    }
+}
