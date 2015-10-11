@@ -37,6 +37,13 @@
       a, a:visited, a:hover {
         color: #8CC63F;
       }
+      .reveal table {
+        border-collapse: separate;
+        border-spacing: 10px;
+      }
+      .reveal table td {
+        border: 0;
+      }
     </style>
   </head>
 
@@ -56,15 +63,30 @@
         <section>
           <h2>What is modern JS?</h2>
           <p>JS is an implementation of the ECMAScript standard.</p>
-          <ul>
-            <li>ECMAScript 3 (1999) <span class="fragment" style="color: #8CC63F;">&larr; last version supported by IE8</span></li>
-            <li>ECMAScript 5 (2009)</li>
-            <li>ECMAScript 2015</li>
-            <li>ECMAScript 2016</li>
-          </ul>
-          <p class="fragment" style="color: #8CC63F;">
-            Windows XP support ended in April 2014—time to move on.
-            Modern JS is ECMAScript 5 and later.
+          <table>
+            <tr>
+              <td>ECMAScript 3 (1999)</td>
+              <td class="fragment" data-fragment-index="1" style="color: red; border-left: 5px solid red;">
+                Last version supported by IE8
+              </td>
+            </tr>
+            <tr>
+              <td>ECMAScript 5 (2009)</td>
+              <td rowspan="3" class="fragment" data-fragment-index="1" style="color: #8CC63F; vertical-align: middle; border-left: 5px solid #8CC63F;">
+                Modern JS
+              </td>
+            </tr>
+            <tr>
+              <td>ECMAScript 2015</td>
+            </tr>
+            <tr>
+              <td>ECMAScript 2016</td>
+            </tr>
+          </table>
+          <p class="fragment" data-fragment-index="1" style="color: #8CC63F;">
+            Client-side: Windows XP support ended in April 2014.<br>
+            Server-side: Node uses a modern JS engine (V8).<br>
+            Can compile to older ES versions with <a href="http://babeljs.io">Babel</a>.
           </p>
         </section>
 
