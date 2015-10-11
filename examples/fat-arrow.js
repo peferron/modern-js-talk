@@ -1,6 +1,5 @@
-var add = (a, b) => a + b;
-
-add(2, 3); // 5
+var sum = (a, b) => a + b;
+sum(2, 3); // 5
 
 [2, 3].map(x => x * x); // [4,  9]
 

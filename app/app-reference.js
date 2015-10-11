@@ -6,7 +6,7 @@ function getLovelyDays(callback) {
   request.addEventListener('load', function() {
     var forecasts = JSON.parse(request.responseText);
     var lovelyDays = [];
-    for (var i = 0; i < forecasts.count; i++) {
+    for (var i = 0; i < forecasts.length; i++) {
       var forecast = forecasts[i];
       if (forecast.humidity <= 90) {
         lovelyDays.push(forecast.day);

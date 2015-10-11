@@ -1,15 +1,30 @@
-// Returns an array of lovely days.
-async function getLovelyDays() {
-  var forecasts = await response.json();
-  return forecasts
-    .filter(forecast => forecast.humidity <= maxHumidity &&
-      forecast.temperature >= minTemperature)
-    .map(forecast => forecast.day);
+// Asynchronously calls callback with an array of lovely days.
+function getLovelyDays(callback) {
+  var request = new XMLHttpRequest();
+  request.open('GET', 'sf-forecast.json', true);
+
+  request.addEventListener('load', function() {
+    var forecasts = JSON.parse(request.responseText);
+    var lovelyDays = [];
+    for (var i = 0; i < forecasts.length; i++) {
+      var forecast = forecasts[i];
+      if (forecast.humidity <= 90) {
+        lovelyDays.push(forecast.day);
+      }
+    }
+    callback(lovelyDays);
+  });
+
+  request.send();
 }
 
 // Called on button click.
-async function showLovelyDays() {
-  var lovelyDays = await getLovelyDays();
-  var html = lovelyDays.map(day => `<li>${day}</li>`).join('');
-  document.getElementById('lovely-days').innerHTML = html;
+function showLovelyDays() {
+  getLovelyDays(function(lovelyDays) {
+    var html = '';
+    for (var i = 0; i < lovelyDays.length; i++) {
+      html += '<li>' + lovelyDays[i] + '</li>';
+    }
+    document.getElementById('lovely-days').innerHTML = html;
+  });
 }

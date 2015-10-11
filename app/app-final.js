@@ -2,8 +2,7 @@
 async function getLovelyDays() {
   var forecasts = await response.json();
   return forecasts
-    .filter(forecast => forecast.humidity <= maxHumidity &&
-      forecast.temperature >= minTemperature)
+    .filter(forecast => forecast.humidity <= 90)
     .map(forecast => forecast.day);
 }
 
