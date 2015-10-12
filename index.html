@@ -210,14 +210,6 @@
         </section>
 
         <section>
-          <h2>Before / after</h2>
-          <ul>
-            <li>25 lines &rarr; 11 lines</li>
-            <li>Expresses intent much more clearly</li>
-            <li>Eliminates bug-prone mutation and manual loops</li>
-        </section>
-
-        <section>
           <h2>Optional parameters (1/2)</h2>
           <p>How to make maximum humidity and minimum temperature configurable?</p>
           <div class="fragment" data-fragment-index="1">
@@ -249,7 +241,35 @@ request.open('GET', 'sf-forecast.json', {async: true});
         </section>
 
         <section>
-          <p>Open app.js and add <code>maxHumidity</code> and <code>minTemperature</code> options.</p>
+          <p>Open app.js and add the options <code>maxHumidity</code> and <code>minTemperature</code>.</p>
+        </section>
+
+        <section>
+          <h2>Default parameter values</h2>
+          <pre><code data-trim class="js" data-fill="examples/default-parameter-values.js"></code></pre>
+        </section>
+
+        <section>
+          <p>Open app.js and make <code>options</code> default to <code>{}</code>.</p>
+        </section>
+
+        <section>
+          <h2>Destructuring</h2>
+          <pre><code data-trim class="js" data-fill="examples/destructuring.js"></code></pre>
+          <p>Deeply nested patterns are supported, but can hurt readability. Use responsibly.</p>
+        </section>
+
+        <section>
+          <p>Open app.js and use destructuring with default values for <code>maxHumidity</code> and <code>minTemperature</code>.</p>
+        </section>
+
+        <section>
+          <h2>Before / after</h2>
+          <ul>
+            <li>30 lines &rarr; 13 lines</li>
+            <li>Expresses intent much more clearly</li>
+            <li>Eliminates bug-prone mutation and manual loops</li>
+          </ul>
         </section>
 
         <section>
