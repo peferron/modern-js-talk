@@ -1,0 +1,14 @@
+{
+    "compilerOptions": {
+        "target": "es6",
+        "noImplicitAny": false,
+        "noEmit": true,
+        "rootDir": ".",
+        "sourceMap": false,
+        "experimentalAsyncFunctions": true
+    },
+    "files": [
+        "whatwg-fetch.d.ts",
+        "app.ts"
+    ]
+}
