@@ -34,9 +34,6 @@
 
     <!-- Custom styles -->
     <style>
-      a, a:visited, a:hover {
-        color: #8CC63F;
-      }
       .reveal table {
         border-collapse: separate;
         border-spacing: 10px;
@@ -213,23 +210,52 @@
         </section>
 
         <section>
-          <h2>Options</h2>
-          <pre class="fragment" data-fragment-index="1"><code data-trim class="js">
-async function getLovelyDays(minHumidity, maxTemperature) {
+          <h2>Before / after</h2>
+          <ul>
+            <li>25 lines &rarr; 11 lines</li>
+            <li>Expresses intent much more clearly</li>
+            <li>Eliminates bug-prone mutation and manual loops</li>
+        </section>
+
+        <section>
+          <h2>Optional parameters (1/2)</h2>
+          <p>How to make maximum humidity and minimum temperature configurable?</p>
+          <div class="fragment" data-fragment-index="1">
+            <pre class="fragment fade-out" data-fragment-index="3"><code data-trim class="js">
+async function getLovelyDays(maxHumidity, minTemperature) {
   ...
 }
-          </code></pre>
+            </code></pre>
+          </div>
           <pre class="fragment" data-fragment-index="2"><code data-trim class="js">
-async function showLovelyDays() {
-  var lovelyDays = await getLovelyDays(75, 80);
-  ...
-}
+var lovelyDays = await getLovelyDays(75, 80);
           </code></pre>
+          <p class="fragment" data-fragment-index="3" style="color: red;">Unreadable for someone not familiar with the code.</p>
+        </section>
+
+        <section>
+          <h2>Optional parameters (2/2)</h2>
+          <p>This line was in our app before we moved to <code>fetch.</code><br>
+          Can you infer what <code>true</code> means?</p>
+          <pre><code data-trim class="js">
+request.open('GET', 'sf-forecast.json', true);
+          </code></pre>
+          <div class="fragment">
+            <p>And now?</p>
+            <pre><code data-trim class="js">
+request.open('GET', 'sf-forecast.json', {async: true});
+            </code></pre>
+          </div>
+        </section>
+
+        <section>
+          <p>Open app.js and add <code>maxHumidity</code> and <code>minTemperature</code> options.</p>
         </section>
 
         <section>
           <h2>Credits</h2>
           <ul>
+            <li><a href="https://youtu.be/wf-BqAjZb8M">https://youtu.be/wf-BqAjZb8M</a></li>
             <li><a href="https://developer.mozilla.org/en-US/docs/Web">https://developer.mozilla.org/en-US/docs/Web</a></li>
             <li><a href="http://www.2ality.com">http://www.2ality.com</a></li>
             <li><a href="https://github.com/lukehoban/es6features">https://github.com/lukehoban/es6features</a></li>
