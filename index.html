@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="css/theme/black.css" id="theme">
 
     <!-- Code syntax highlighting -->
-    <link rel="stylesheet" href="lib/css/zenburn.css">
+    <link rel="stylesheet" href="lib/css/monokai.css">
 
     <!-- Printing and PDF exports -->
     <script>
@@ -122,22 +122,22 @@
           <p>Open app.js in text editor.</p>
         </section>
 
-        <section>
+        <section data-background="#B71C1C">
           <h2>Array methods</h2>
           <pre><code data-trim class="js" data-fill="examples/array-methods.js"></code></pre>
           <p>And <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#Iteration_methods">others</a>.</p>
         </section>
 
-        <section>
+        <section data-background="#B71C1C">
           <p>Open app.js and replace <code>for</code> loops with <code>Array</code> methods.</p>
         </section>
 
-        <section>
+        <section data-background="#880E4F">
           <h2>Arrow functions (1/2)</h2>
           <pre><code data-trim class="js" data-fill="examples/fat-arrow.js"></code></pre>
         </section>
 
-        <section>
+        <section data-background="#880E4F">
           <style scoped>
             .reveal div.replaceable, .reveal div.replaceable.visible + div.replaceable {
               display: none;
@@ -172,44 +172,44 @@
           <div class="fragment" data-fragment-index="1">
             <div class="fragment fade-out" data-fragment-index="3">
               <p>But it doesn't.</p>
-              <pre style="text-align: center;"><code class="nohighlight" style="color: red;">Uncaught TypeError: Cannot read property 'name' of undefined</code></pre>
+              <pre><code class="markdown">Uncaught TypeError: Cannot read property 'name' of undefined</code></pre>
             </div>
           </div>
         </section>
 
-        <section>
+        <section data-background="#880E4F">
           <p>Open app.js and replace <code>function</code> with <code>=></code>.</p>
         </section>
 
-        <section>
+        <section data-background="#4A148C">
           <h2>Template strings</h2>
           <pre><code data-trim class="js" data-fill="examples/template-strings.js"></code></pre>
         </section>
 
-        <section>
+        <section data-background="#4A148C">
           <p>Open app.js and replace string concatenation with interpolation.</p>
         </section>
 
-        <section>
+        <section data-background="#311B92">
           <h2>Fetch API</h2>
           <p>Uses <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promises</a> instead of callbacks.</p>
           <pre><code data-trim class="js" data-fill="examples/fetch.js"></code></pre>
         </section>
 
-        <section>
+        <section data-background="#311B92">
           <p>Open app.js and replace <code>XMLHttpRequest</code> with <code>fetch</code>.</p>
         </section>
 
-        <section>
+        <section data-background="#01579B">
           <h2>async / await</h2>
           <pre><code data-trim class="js" data-fill="examples/async-await.js"></code></pre>
         </section>
 
-        <section>
+        <section data-background="#01579B">
           <p>Open app.js and replace callbacks with <code>async</code> / <code>await</code>.</p>
         </section>
 
-        <section>
+        <section data-background="#006064">
           <h2>Optional parameters (1/2)</h2>
           <p>How to make maximum humidity and minimum temperature configurable?</p>
           <div class="fragment" data-fragment-index="1">
@@ -222,10 +222,10 @@ async function getLovelyDays(maxHumidity, minTemperature) {
           <pre class="fragment" data-fragment-index="2"><code data-trim class="js">
 var lovelyDays = await getLovelyDays(75, 80);
           </code></pre>
-          <p class="fragment" data-fragment-index="3" style="color: red;">Unreadable for someone not familiar with the code.</p>
+          <p class="fragment" data-fragment-index="3">Unreadable for someone not familiar with the code.</p>
         </section>
 
-        <section>
+        <section data-background="#006064">
           <h2>Optional parameters (2/2)</h2>
           <p>This line was in our app before we moved to <code>fetch.</code><br>
           Can you infer what <code>true</code> means?</p>
@@ -240,26 +240,26 @@ request.open('GET', 'sf-forecast.json', {async: true});
           </div>
         </section>
 
-        <section>
+        <section data-background="#006064">
           <p>Open app.js and add the options <code>maxHumidity</code> and <code>minTemperature</code>.</p>
         </section>
 
-        <section>
+        <section data-background="#1B5E20">
           <h2>Default parameter values</h2>
           <pre><code data-trim class="js" data-fill="examples/default-parameter-values.js"></code></pre>
         </section>
 
-        <section>
+        <section data-background="#1B5E20">
           <p>Open app.js and make <code>options</code> default to <code>{}</code>.</p>
         </section>
 
-        <section>
+        <section data-background="#827717">
           <h2>Destructuring</h2>
           <pre><code data-trim class="js" data-fill="examples/destructuring.js"></code></pre>
           <p>Deeply nested patterns are supported, but can hurt readability. Use responsibly.</p>
         </section>
 
-        <section>
+        <section data-background="#827717">
           <p>Open app.js and use destructuring with default values for <code>maxHumidity</code> and <code>minTemperature</code>.</p>
         </section>
 
