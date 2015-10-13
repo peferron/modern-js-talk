@@ -44,9 +44,19 @@
       .reveal pre code {
         max-height: 500px;
       }
+      
+      /* Used in the slide "Today's app". */
       .app-iframe {
         width: 500px;
         height: 200px;
+      }
+
+      /* Used in the slide "Arrow functions (2/2)". */
+      .reveal div.replaceable, .reveal div.replaceable.visible + div.replaceable {
+        display: none;
+      }
+      .reveal div.replaceable.visible {
+        display: block;
       }
     </style>
   </head>
@@ -138,15 +148,6 @@
         </section>
 
         <section data-background="#880E4F">
-          <style scoped>
-            .reveal div.replaceable, .reveal div.replaceable.visible + div.replaceable {
-              display: none;
-            }
-            .reveal div.replaceable.visible {
-              display: block;
-            }
-          </style>
-
           <h2>Arrow functions (2/2)</h2>
 
           <div class="fragment replaceable" data-fragment-index="4">
