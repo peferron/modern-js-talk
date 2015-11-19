@@ -1,5 +1,6 @@
 // Returns an array of lovely days.
 async function getLovelyDays() {
+  var response = await fetch('sf-forecast.json');
   var forecasts = await response.json();
   return forecasts
     .filter(forecast => forecast.humidity <= 90)
